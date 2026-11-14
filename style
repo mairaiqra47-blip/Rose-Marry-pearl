@@ -1,0 +1,41 @@
+/* Rose Marry Pearl--Website Design*/
+/*1.Colour palette*/
+:root {
+    --pink: #f5E1E2;
+    --light-pink: #FFF5F3;
+    --rose-gold: #C08081;
+    --dark-rose: #955D61;
+    --white: #FFFFFF;
+    --text: #333333;
+}
+
+/*2. Basic website setting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*3. Main body design*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/*4. Headings and text styles*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark-rose);
+}
+
+/*5.links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
