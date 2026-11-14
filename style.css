@@ -558,3 +558,19 @@ footer .logo {
 .about-img {
     height: 380px;
 }
+
+.nav {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+}

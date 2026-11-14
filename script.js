@@ -1,7 +1,11 @@
 const submitBtn = document.getElementById('submitBtn');
 const successMsg = document.getElementById('successMsg');
 const dateInput = document.getElementById('date');
+const timeInput = document.getElementById('time');
 const salonNumber = '923197069815';
+
+const openingTime = '10:00';
+const closingTime = '20:00';
 
 const now = new Date();
 const today = now.getFullYear() + '-' +
@@ -9,13 +13,15 @@ const today = now.getFullYear() + '-' +
     String(now.getDate()).padStart(2, '0');
 
 dateInput.min = today;
+timeInput.min = openingTime;
+timeInput.max = closingTime;
 
 submitBtn.addEventListener('click', function () {
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const service = document.getElementById('service').value;
     const date = dateInput.value;
-    const time = document.getElementById('time').value;
+    const time = timeInput.value;
     const notes = document.getElementById('message').value.trim();
 
     if (!name || !phone || !service || !date || !time) {
@@ -25,6 +31,11 @@ submitBtn.addEventListener('click', function () {
 
     if (date < today) {
         alert('Please choose today or a future date.');
+        return;
+    }
+
+    if (time < openingTime || time > closingTime) {
+        alert('Please choose a time between 10:00 AM and 8:00 PM.');
         return;
     }
 
